@@ -33,16 +33,22 @@ bars.forEach((element)=>{
 
 
 let modalBox = document.getElementById("modal");
-let btn = document.getElementById("modalOpen");
-let span = document.getElementsByClassName("modalClose")[0];
-btn.onclick = function() {
-  modalBox.style.display = "block";
-}
-span.onclick = function() {
-  modalBox.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modalBox) {
+let modalBtn = document.querySelectorAll('.modalOpen');
+console.log(modalBtn);
+let modalSpan = document.getElementsByClassName("modalClose")[0];
+modalBtn.forEach((element)=>{
+  element.onclick = function() {
+    modalBox.style.display = "block";
+    document.getElementById("modalMainImage").src = element.currentSrc;
+  }
+  modalSpan.onclick = function() {
     modalBox.style.display = "none";
   }
-}
+  window.onclick = function(event) {
+    if (event.target == modalBox) {
+      modalBox.style.display = "none";
+    }
+  }
+})
+
+
