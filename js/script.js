@@ -34,7 +34,6 @@ bars.forEach((element)=>{
 
 let modalBox = document.getElementById("modal");
 let modalBtn = document.querySelectorAll('.modalOpen');
-console.log(modalBtn);
 let modalSpan = document.getElementsByClassName("modalClose")[0];
 modalBtn.forEach((element)=>{
   element.onclick = function() {
@@ -51,4 +50,13 @@ modalBtn.forEach((element)=>{
   }
 })
 
+var msgForm = document.getElementById("contact-form");
+function handleForm(event) { event.preventDefault();
+  document.getElementById("cfsubmit").value="Submitted Successfully!!!";
+  setTimeout(()=>{
+    document.getElementById("cfsubmit").value="Submit";
+  }, 5000);
+
+} 
+  msgForm.addEventListener('submit', handleForm);
 

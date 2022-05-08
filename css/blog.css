@@ -1,0 +1,10 @@
+.post-date{
+    display: inline-block;
+}
+.post-tag{
+    display: inline-block;
+
+}
+.card-post{
+    padding: 80px 50px;
+}
