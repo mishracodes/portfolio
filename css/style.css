@@ -186,7 +186,7 @@ bottom: 25px;
   font-size: 40px;
 }
 .card-home{
-  padding: 180px 120px;
+  padding: 20% 8%;
   /* padding-top: 180px;
   padding-left: 120px;
   padding-right: 50px; */
@@ -235,23 +235,23 @@ bottom: 25px;
     /* scroll-snap-type: y proximity; */
 }
 .card-aboutme{
-  padding: 80px 50px;
+  padding: 80px 8%;
 
 }
 .card-resume{
-  padding: 80px 50px;
+  padding: 80px 8%;
 
 }
 .card-works{
-  padding: 80px 50px;
+  padding: 80px 8%;
 
 }
 .card-certifications{
-  padding: 80px 50px;
+  padding: 80px 8%;
 
 }
 .card-blogs{
-  padding: 80px 50px;
+  padding: 80px 8%;
 
 }
 .card-stats{
