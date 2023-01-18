@@ -83,15 +83,17 @@
     }
   }
   .mx-1{
-    margin: 10px 0;
+    margin-right: 0.25rem !important;
+    margin-left: 0.25rem !important
   }
   .mx-2{
-    margin: 20px 0;
+    margin-right: 0.5rem !important;
+    margin-left: 0.5rem !important
   }
   
   .mx-3 {
-    margin-right: 0.5rem !important;
-    margin-left: 0.5rem !important
+    margin-right: 1rem !important;
+    margin-left: 1rem !important
   }
 
 
