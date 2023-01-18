@@ -178,7 +178,7 @@ bottom: 25px;
     background: var(--glass);
     border-radius: 20px;
     margin-bottom: 30px;
-    scroll-snap-align: center;
+    /* scroll-snap-align: center; */
 
 }
 .danger{
@@ -232,7 +232,7 @@ bottom: 25px;
     overflow-y: scroll;
     padding-right: 17px; 
     box-sizing: content-box; 
-    scroll-snap-type: y proximity;
+    /* scroll-snap-type: y proximity; */
 }
 .card-aboutme{
   padding: 80px 50px;
@@ -273,8 +273,8 @@ bottom: 25px;
   background: var(--danger);
   border-radius: 25px;
   display: block;
-  height: 5px;
-  margin-top: 14px;
+  height: 4px;
+  margin-top: 8px;
   width: 30px;
 }
 .card-p{

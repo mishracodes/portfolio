@@ -53,7 +53,8 @@ const modalSpan = document.getElementsByClassName("modalClose")[0];
 modalBtn.forEach((element) => {
   element.onclick = function () {
     modalBox.style.display = "block";
-    document.getElementById("modalMainImage").src = element.currentSrc;
+    
+    document.getElementById("modalMainImage").src = element.getAttribute('data-src');
   };
   modalSpan.onclick = function () {
     modalBox.style.display = "none";
