@@ -75,3 +75,16 @@ function handleForm(event) {
   }, 3000);
 }
 msgForm.addEventListener("submit", handleForm);
+
+
+const miniNav=document.getElementById('mini-nav-menu-snap');
+miniNav.addEventListener('click',()=>{
+  if(miniNav.classList[1]=='fa-bars'){
+    miniNav.classList.remove("fa-bars");
+    miniNav.classList.add("fa-times");
+  }
+  else{
+    miniNav.classList.remove("fa-times");
+    miniNav.classList.add("fa-bars");
+  }
+})

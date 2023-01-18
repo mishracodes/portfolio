@@ -67,6 +67,10 @@ main {
   
 }
 
+.navCotentMargin{
+  margin-top: 400px
+}
+
 @media screen and (min-width: 1150px) {
   #mininav{
     display: none;
@@ -85,15 +89,28 @@ main {
   position: relative;
 }
 .mini-nav{
-  display: flex;
-  height: 50px;
   width: 95%;
-  align-items: center;
   background: var(--glass);
   border-radius: 20px;
   position:absolute;
   top: 25px;
   padding: 2px 10px;
+}
+.mini-nav-controller{
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+.mini-navBar{
+  /* display: none; */
+  padding-left: 11%;
+  padding-top: 2%;
+}
+.fa-bars{
+  font-size: 20px;
+}
+.fa-times{
+  font-size: 28px;
 }
 .dashboard {
   flex-grow: 2;
