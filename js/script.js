@@ -66,9 +66,66 @@ modalBtn.forEach((element) => {
   };
 });
 
+function sendEmail() {
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "sender@email_address.com",
+    Password: "Enter your password",
+    To: 'receiver@email_address.com',
+    From: "sender@email_address.com",
+    Subject: "Sending Email using javascript",
+    Body: "Well that was easy!!",
+  })
+    .then(function (message) {
+      alert("mail sent successfully")
+    });
+}
+const api='90c74477d067c5a9f6a1e64a8b2367bb'
+const secret='ccadbd413c9723ac374cec99460a42ec'
+
+
+
+
+function sendMail(name, email, subject, message, reciever) {
+  const myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+  myHeaders.set('Authorization', 'Basic ' + btoa('90c74477d067c5a9f6a1e64a8b2367bb'+":" +'ccadbd413c9723ac374cec99460a42ec'));
+
+  const data = JSON.stringify({
+    "Messages": [{
+      "From": {"Email": 'drive.techsrijan@gmail.com', "Name": name},
+      "To": [{"Email": reciever, "Name": "Amit Mishra"}],
+      "Subject": subject,
+      "TextPart": message
+    }]
+  });
+
+  const requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: data,
+  };
+
+  fetch("https://api.mailjet.com/v3.1/send", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+}
+
+
+
+
 const msgForm = document.getElementById("contact-form");
 function handleForm(event) {
   event.preventDefault();
+ 
+  const name=msgForm.elements[0].value
+  const email=msgForm.elements[1].value
+  const subject='mishracodesFormMessage - '+msgForm.elements[1].value
+  const message=msgForm.elements[2].value
+  sendMail(name,email,subject,message,'amitmishra.rh@gmail.com')
+
+
   document.getElementById("cfsubmit").value = "Submitted Successfully!!!";
   setTimeout(() => {
     document.getElementById("cfsubmit").value = "Submit";
