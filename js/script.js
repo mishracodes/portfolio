@@ -1,3 +1,4 @@
+import {MAIL_KEY,MAIL_SECRET} from './apikey.js'
 const startDate = new Date("1998-09-10");
 const diffDate = new Date(new Date() - startDate);
 document.getElementById("dobdiff2").innerHTML =diffDate.toISOString().slice(0, 4) - 1970;
@@ -84,7 +85,7 @@ function sendEmail() {
 function sendMail(name, email, subject, message, reciever) {
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
-  myHeaders.set('Authorization', 'Basic ' + btoa('90c74477d067c5a9f6a1e64a8b2367bb'+":" +'ccadbd413c9723ac374cec99460a42ec'));
+  myHeaders.set('Authorization', 'Basic ' + btoa(MAIL_KEY+":" +MAIL_SECRET));
  
   const data = JSON.stringify({
     "Messages": [{
