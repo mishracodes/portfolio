@@ -85,7 +85,6 @@ function sendMail(name, email, subject, message, reciever) {
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   myHeaders.set('Authorization', 'Basic ' + btoa('90c74477d067c5a9f6a1e64a8b2367bb'+":" +'ccadbd413c9723ac374cec99460a42ec'));
-  myHeaders.set('Access-Control-Allow-Origin','*');
  
   const data = JSON.stringify({
     "Messages": [{
@@ -100,6 +99,7 @@ function sendMail(name, email, subject, message, reciever) {
     method: 'POST',
     headers: myHeaders,
     body: data,
+    mode:'no-cors'
   };
 
   fetch("https://api.mailjet.com/v3.1/send", requestOptions)
