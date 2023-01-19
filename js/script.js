@@ -99,7 +99,7 @@ function sendMail(name, email, subject, message, reciever) {
     method: 'POST',
     headers: myHeaders,
     body: data,
-    mode:'no-cors'
+    mode:'cors'
   };
 
   fetch("https://api.mailjet.com/v3.1/send", requestOptions)
