@@ -99,10 +99,9 @@ function sendMail(name, email, subject, message, reciever) {
     method: 'POST',
     headers: myHeaders,
     body: data,
-    mode:'cors'
   };
 
-  fetch("https://api.mailjet.com/v3.1/send", requestOptions)
+  fetch("https://mishracodes.netlify.app/pathx", requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
