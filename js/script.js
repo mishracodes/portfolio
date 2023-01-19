@@ -85,7 +85,8 @@ function sendMail(name, email, subject, message, reciever) {
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   myHeaders.set('Authorization', 'Basic ' + btoa('90c74477d067c5a9f6a1e64a8b2367bb'+":" +'ccadbd413c9723ac374cec99460a42ec'));
-
+  const greetPerson = process.env.MAIL_SECRET;
+  console.log(`Say hello: ${greetPerson}`);
   const data = JSON.stringify({
     "Messages": [{
       "From": {"Email": 'drive.techsrijan@gmail.com', "Name": name},
@@ -99,6 +100,7 @@ function sendMail(name, email, subject, message, reciever) {
     method: 'POST',
     headers: myHeaders,
     body: data,
+    mode:'cors'
   };
 
   fetch("https://api.mailjet.com/v3.1/send", requestOptions)
