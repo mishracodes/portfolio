@@ -80,11 +80,6 @@ function sendEmail() {
       alert("mail sent successfully")
     });
 }
-const api='90c74477d067c5a9f6a1e64a8b2367bb'
-const secret='ccadbd413c9723ac374cec99460a42ec'
-
-
-
 
 function sendMail(name, email, subject, message, reciever) {
   const myHeaders = new Headers();
